@@ -425,74 +425,35 @@ $('#statInput').addEventListener('input', updateStats);
 updateStats();
 
 /* ---------- Latihan soal ---------- */
-const tabelBuah = `<table class="mini"><tr><th>Buah</th><th>Jumlah Siswa</th></tr>
-<tr><td>Apel</td><td>8</td></tr><tr><td>Jeruk</td><td>6</td></tr><tr><td>Mangga</td><td>10</td></tr>
-<tr><td>Pisang</td><td>4</td></tr><tr><td>Anggur</td><td>2</td></tr></table>`;
-
-// Latihan 1: Bab 1–5 (Data, jenis data, turus, tabel, diagram)
-const questions1 = [
-  { q: 'Kumpulan fakta berupa angka, kata, simbol, atau gambar yang belum diolah disebut …', o: ['Informasi', 'Data', 'Diagram', 'Program'], a: 1, e: 'Data adalah fakta mentah yang belum diolah.' },
-  { q: 'Data yang sudah diolah sehingga bermakna dan mudah dipahami disebut …', o: ['Data mentah', 'Informasi', 'Turus', 'Piksel'], a: 1, e: 'Informasi adalah hasil pengolahan data.' },
-  { q: 'Mengapa data perlu disajikan dalam bentuk tabel atau diagram?', o: ['Agar data terlihat lebih banyak', 'Agar data mudah dibaca dan dibandingkan', 'Agar data menjadi rahasia', 'Agar komputer tidak bisa membacanya'], a: 1, e: 'Representasi data bertujuan membuat data mudah dipahami dan dibandingkan.' },
-  { q: 'Manakah yang termasuk data kuantitatif?', o: ['Warna kesukaan', 'Nama hewan peliharaan', 'Tinggi badan 145 cm', 'Hobi membaca'], a: 2, e: 'Data kuantitatif berupa angka hasil mengukur atau menghitung, seperti tinggi badan.' },
-  { q: 'Manakah yang termasuk data kualitatif?', o: ['Berat badan 35 kg', 'Jumlah saudara 2 orang', 'Suhu udara 30°C', 'Makanan kesukaan'], a: 3, e: 'Makanan kesukaan berupa kategori/keterangan, bukan angka, jadi termasuk data kualitatif.' },
-  { q: 'Panjang meja hasil pengukuran adalah 120,5 cm. Data ini termasuk …', o: ['Data kualitatif', 'Data kuantitatif cacah', 'Data kuantitatif ukur', 'Data simbol'], a: 2, e: 'Diperoleh dengan mengukur dan bisa berupa desimal, jadi termasuk data kuantitatif ukur (kontinu).' },
-  { q: 'Cara mengumpulkan data dengan bertanya langsung kepada narasumber disebut …', o: ['Observasi', 'Wawancara', 'Pengukuran', 'Turus'], a: 1, e: 'Wawancara adalah tanya jawab langsung dengan narasumber.' },
-  { q: 'Doni menghitung kendaraan yang lewat di depan sekolah selama 10 menit. Cara mengumpulkan data ini disebut …', o: ['Wawancara', 'Angket', 'Observasi', 'Diagram'], a: 2, e: 'Mengamati dan mencatat langsung disebut observasi.' },
-  { q: 'Lambang turus berupa empat garis tegak yang dicoret satu garis miring bernilai …', o: ['4', '5', '6', '10'], a: 1, e: '4 garis tegak + 1 garis miring = 5.' },
-  { q: 'Hasil turus terdiri dari 2 kelompok lima (yang dicoret) dan 3 garis tegak. Nilainya adalah …', o: ['8', '10', '13', '23'], a: 2, e: '5 + 5 + 3 = 13.' },
-  { q: `Perhatikan tabel berikut!${tabelBuah}Buah yang paling banyak disukai siswa adalah …`, o: ['Apel', 'Mangga', 'Jeruk', 'Anggur'], a: 1, e: 'Mangga dipilih 10 siswa, paling banyak.' },
-  { q: `Perhatikan tabel berikut!${tabelBuah}Selisih siswa yang menyukai apel dan pisang adalah …`, o: ['2 siswa', '4 siswa', '6 siswa', '12 siswa'], a: 1, e: 'Apel 8 − Pisang 4 = 4 siswa.' },
-  { q: `Perhatikan tabel berikut!${tabelBuah}Jumlah seluruh siswa adalah …`, o: ['28 siswa', '30 siswa', '32 siswa', '25 siswa'], a: 1, e: '8 + 6 + 10 + 4 + 2 = 30 siswa.' },
-  { q: 'Pada sebuah piktogram, 1 gambar 🍎 mewakili 2 siswa. Jika terdapat 4 gambar 🍎, banyak siswa adalah …', o: ['4 siswa', '6 siswa', '8 siswa', '10 siswa'], a: 2, e: '4 gambar × 2 siswa = 8 siswa.' },
-  { q: 'Pada piktogram yang sama (1 gambar = 2 siswa), terdapat 3 gambar utuh dan setengah gambar. Banyak siswa adalah …', o: ['3 siswa', '6 siswa', '7 siswa', '8 siswa'], a: 2, e: '3 × 2 = 6, ditambah setengah gambar = 1 siswa. Total 7 siswa.' },
-  { q: 'Pada diagram batang, sumbu tegak (Y) biasanya menunjukkan …', o: ['Nama kategori', 'Jumlah atau nilai data', 'Judul diagram', 'Warna batang'], a: 1, e: 'Sumbu tegak menunjukkan jumlah/nilai, sumbu mendatar menunjukkan kategori.' },
-  { q: 'Diagram yang paling tepat untuk menunjukkan perubahan tinggi tanaman dari hari ke hari adalah …', o: ['Diagram batang', 'Diagram garis', 'Diagram lingkaran', 'Piktogram'], a: 1, e: 'Diagram garis cocok untuk menunjukkan perubahan dari waktu ke waktu.' },
-  { q: 'Diagram yang paling tepat untuk menunjukkan bagian dari keseluruhan (persentase) adalah …', o: ['Diagram garis', 'Piktogram', 'Diagram lingkaran', 'Tabel'], a: 2, e: 'Diagram lingkaran menunjukkan bagian dari keseluruhan (100% = 360°).' },
-  { q: 'Jika data tabel buah (total 30 siswa) dibuat diagram lingkaran, besar sudut juring mangga (10 siswa) adalah …', o: ['90°', '100°', '120°', '180°'], a: 2, e: '10/30 × 360° = 120° (sepertiga lingkaran).' },
-  { q: 'Pada diagram lingkaran, 25% dari 40 siswa menyukai warna biru. Banyak siswa yang menyukai biru adalah …', o: ['4 siswa', '10 siswa', '25 siswa', '15 siswa'], a: 1, e: '25% × 40 = 25/100 × 40 = 10 siswa.' },
-];
-
-// Latihan 2: Bab 6–10 (Simbol, biner, piksel, struktur data, membaca data)
-const questions2 = [
-  { q: 'Lampu lalu lintas berwarna kuning merupakan simbol yang berarti …', o: ['Berhenti', 'Hati-hati', 'Jalan terus', 'Putar balik'], a: 1, e: 'Merah = berhenti, kuning = hati-hati, hijau = jalan.' },
-  { q: 'Dengan kode A=1, B=2, C=3, dan seterusnya, kata <b>BACA</b> ditulis …', o: ['1-2-3-1', '2-1-3-1', '2-3-1-1', '3-1-2-1'], a: 1, e: 'B=2, A=1, C=3, A=1 → 2-1-3-1.' },
-  { q: 'Bilangan biner hanya menggunakan angka …', o: ['1 dan 2', '0 dan 1', '0 sampai 9', '1 sampai 10'], a: 1, e: 'Biner adalah bilangan basis 2, hanya 0 dan 1.' },
-  { q: 'Komputer menyimpan semua data (angka, huruf, gambar, suara) dalam bentuk …', o: ['Bilangan desimal', 'Bilangan biner', 'Huruf abjad', 'Gambar'], a: 1, e: 'Komputer bekerja dengan listrik ON/OFF yang diwakili 1 dan 0 (biner).' },
-  { q: '1 byte sama dengan …', o: ['2 bit', '4 bit', '8 bit', '10 bit'], a: 2, e: '1 byte = 8 bit.' },
-  { q: 'Bilangan biner 101 sama dengan bilangan desimal …', o: ['3', '4', '5', '6'], a: 2, e: '1×4 + 0×2 + 1×1 = 5.' },
-  { q: 'Bilangan biner 1000 sama dengan bilangan desimal …', o: ['1', '4', '8', '1000'], a: 2, e: '1×8 + 0×4 + 0×2 + 0×1 = 8.' },
-  { q: 'Bilangan biner 1111 sama dengan bilangan desimal …', o: ['4', '8', '15', '16'], a: 2, e: '8 + 4 + 2 + 1 = 15.' },
-  { q: 'Bilangan desimal 6 jika ditulis dalam biner 4 digit adalah …', o: ['0110', '0101', '0011', '1100'], a: 0, e: '6 = 4 + 2 → 0×8 + 1×4 + 1×2 + 0×1 = 0110.' },
-  { q: 'Bilangan desimal 10 jika ditulis dalam biner adalah …', o: ['1100', '1010', '1001', '0110'], a: 1, e: '10 = 8 + 2 → 1×8 + 0×4 + 1×2 + 0×1 = 1010.' },
-  { q: 'Titik-titik kecil berbentuk kotak yang menyusun gambar digital disebut …', o: ['Bit', 'Piksel', 'Byte', 'Grafik'], a: 1, e: 'Piksel (picture element) adalah unsur terkecil gambar digital.' },
-  { q: 'Pada gambar hitam-putih, 1 = hitam dan 0 = putih. Baris kode <code>1001</code> akan tampak seperti …', o: ['⬛⬜⬜⬛', '⬜⬛⬛⬜', '⬛⬛⬜⬜', '⬜⬜⬛⬛'], a: 0, e: '1 = hitam, 0 = putih → hitam, putih, putih, hitam.' },
-  { q: 'Warna pada layar dibentuk dari campuran tiga warna cahaya yang disingkat RGB, yaitu …', o: ['Merah, Hijau, Biru', 'Merah, Kuning, Biru', 'Hitam, Putih, Abu', 'Ungu, Hijau, Kuning'], a: 0, e: 'RGB = Red (merah), Green (hijau), Blue (biru).' },
-  { q: 'Struktur data yang bercabang seperti silsilah keluarga atau susunan folder disebut …', o: ['Daftar (list)', 'Tabel', 'Pohon (tree)', 'Antrean'], a: 2, e: 'Struktur pohon bercabang dari akar ke bawah.' },
-  { q: 'Peta yang terdiri dari titik-titik (tempat) dan garis penghubung (jalan) adalah contoh struktur data …', o: ['Graf', 'Tabel', 'Daftar', 'Piktogram'], a: 0, e: 'Graf terdiri dari simpul (titik) dan sisi (garis).' },
-  { q: 'Antrean membeli tiket di loket: yang datang pertama dilayani pertama. Ini contoh struktur data …', o: ['Tumpukan (stack)', 'Antrean (queue)', 'Pohon', 'Graf'], a: 1, e: 'Queue: pertama masuk, pertama keluar.' },
-  { q: 'Piring yang terakhir ditaruh di atas tumpukan akan diambil pertama kali. Ini contoh struktur data …', o: ['Antrean (queue)', 'Tumpukan (stack)', 'Tabel', 'Graf'], a: 1, e: 'Stack: terakhir masuk, pertama keluar.' },
-  { q: 'Nilai ulangan Dina adalah 7, 8, dan 9. Rata-rata nilai Dina adalah …', o: ['7', '8', '9', '24'], a: 1, e: '(7 + 8 + 9) ÷ 3 = 24 ÷ 3 = 8.' },
-  { q: 'Data: 6, 7, 7, 8, 9, 7, 8. Modus data tersebut adalah …', o: ['6', '7', '8', '9'], a: 1, e: 'Angka 7 muncul paling sering (3 kali).' },
-  { q: 'Data: 5, 9, 6, 8, 7. Median (nilai tengah) data tersebut adalah …', o: ['6', '7', '8', '9'], a: 1, e: 'Diurutkan: 5, 6, 7, 8, 9. Nilai tengahnya 7.' },
-];
-
+// Bank soal ada di file soal.js (questions1 dan questions2)
 const letters = ['A', 'B', 'C', 'D'];
+const levelName = { C4: 'Menganalisis', C5: 'Mengevaluasi', C6: 'Mencipta' };
 
 function setupQuiz(id, questions) {
   const form = $(`#${id}-form`);
   const result = $(`#${id}-result`);
   let checked = false;
 
+  let order = [];
+  const shuffle = (arr) => {
+    const a = arr.slice();
+    for (let i = a.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [a[i], a[j]] = [a[j], a[i]];
+    }
+    return a;
+  };
+
   function render() {
+    order = questions.map((item) => shuffle(item.o.map((_, j) => j)));
     form.innerHTML = questions.map((item, i) => `
       <div class="q" id="${id}-q${i}">
-        <div class="q-head"><span class="q-num">${i + 1}</span><div class="q-text">${item.q}</div></div>
+        <div class="q-head"><span class="q-num">${i + 1}</span><div class="q-text">${item.l ? `<span class="lvl lvl-${item.l}">${item.l} · ${levelName[item.l]}</span>` : ''}${item.q}</div></div>
         <div class="q-opts">
-          ${item.o.map((opt, j) => `
+          ${order[i].map((j, pos) => `
             <label class="q-opt" data-j="${j}">
               <input type="radio" name="${id}-q${i}" value="${j}">
-              <span><b>${letters[j]}.</b> ${opt}</span>
+              <span><b>${letters[pos]}.</b> ${item.o[j]}</span>
             </label>`).join('')}
         </div>
       </div>`).join('');
@@ -530,7 +491,7 @@ function setupQuiz(id, questions) {
       });
       box.querySelectorAll('input').forEach((inp) => (inp.disabled = true));
       if (!box.querySelector('.q-ex')) {
-        box.insertAdjacentHTML('beforeend', `<div class="q-ex">${pv === item.a ? '✅ Benar!' : `❌ Jawaban benar: <b>${letters[item.a]}</b>.`} ${item.e}</div>`);
+        box.insertAdjacentHTML('beforeend', `<div class="q-ex">${pv === item.a ? '✅ Benar!' : `❌ Jawaban benar: <b>${letters[order[i].indexOf(item.a)]}</b>.`} ${item.e}</div>`);
       }
       if (pv === item.a) right++;
     });
