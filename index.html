@@ -6,7 +6,7 @@
   <title>Representasi Data – Koding Kelas 6</title>
   <meta name="theme-color" content="#ec6416">
   <meta name="author" content="Arif Anwar">
-  <meta name="description" content="Materi lengkap Koding dan Kecerdasan Artifisial kelas 6: Representasi Data. Data, jenis data, turus, tabel, diagram, simbol, bilangan biner, piksel, struktur data, dan latihan soal SAS.">
+  <meta name="description" content="Materi lengkap Koding dan Kecerdasan Artifisial kelas 6: Representasi Data. Data, jenis data, turus, tabel, diagram, simbol, bilangan biner, piksel, struktur data, dan dua latihan soal.">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📊</text></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -31,7 +31,8 @@
       <a href="#piksel">Piksel</a>
       <a href="#struktur">Struktur Data</a>
       <a href="#membaca">Membaca Data</a>
-      <a href="#latihan" class="nav-cta">Latihan SAS</a>
+      <a href="#latihan1" class="nav-cta">Latihan 1</a>
+      <a href="#latihan2" class="nav-cta">Latihan 2</a>
       <a href="https://robospark-seven.vercel.app/" class="nav-home">← Portal</a>
     </nav>
   </div>
@@ -48,7 +49,7 @@
       <p class="lead">Belajar cara menyajikan data supaya mudah dipahami, oleh manusia maupun komputer. Mulai dari turus, tabel, dan diagram, sampai bilangan biner dan gambar piksel.</p>
       <div class="hero-actions">
         <a href="#data" class="btn btn-primary">Mulai Belajar →</a>
-        <a href="#latihan" class="btn btn-ghost">Langsung Latihan Soal</a>
+        <a href="#latihan1" class="btn btn-ghost">Langsung ke Latihan</a>
       </div>
     </div>
     <div class="hero-card">
@@ -76,13 +77,14 @@
       <a href="#mengumpulkan" class="map-card c3"><span>3</span>Mengumpulkan Data &amp; Turus</a>
       <a href="#tabel" class="map-card c4"><span>4</span>Tabel</a>
       <a href="#diagram" class="map-card c5"><span>5</span>Diagram</a>
+      <a href="#latihan1" class="map-card quiz-card"><span>✏️</span>Latihan 1</a>
       <a href="#simbol" class="map-card c6"><span>6</span>Simbol &amp; Kode</a>
       <a href="#biner" class="map-card c1"><span>7</span>Bilangan Biner</a>
       <a href="#piksel" class="map-card c2"><span>8</span>Gambar Piksel</a>
       <a href="#struktur" class="map-card c3"><span>9</span>Struktur Data</a>
       <a href="#membaca" class="map-card c4"><span>10</span>Membaca Data</a>
-      <a href="#latihan" class="map-card c5"><span>11</span>Latihan Soal SAS</a>
-      <a href="#glosarium" class="map-card c6"><span>12</span>Glosarium</a>
+      <a href="#latihan2" class="map-card quiz-card"><span>✏️</span>Latihan 2</a>
+      <a href="#glosarium" class="map-card c6"><span>11</span>Glosarium</a>
     </div>
   </div>
 </section>
@@ -338,6 +340,23 @@
         </tbody>
       </table>
     </div>
+  </div>
+</section>
+
+<!-- ============ LATIHAN 1 ============ -->
+<section id="latihan1" class="section section-quiz">
+  <div class="container">
+    <span class="chapter">✏️ Latihan 1</span>
+    <h2 class="section-title">Latihan 1: Data, Tabel &amp; Diagram</h2>
+    <p>Uji pemahamanmu tentang Bab 1–5: data dan informasi, jenis data, turus, tabel, dan diagram. Kerjakan semua soal, lalu klik <b>Periksa Jawaban</b>. Pembahasan akan muncul setelah diperiksa.</p>
+    <div class="quiz-progress"><div id="latihan1-bar"></div></div>
+    <p class="hint" id="latihan1-count"></p>
+    <form id="latihan1-form" class="quiz"></form>
+    <div class="btn-row center">
+      <button class="btn btn-primary" id="latihan1-check">✅ Periksa Jawaban</button>
+      <button class="btn btn-ghost" id="latihan1-reset">↺ Ulangi</button>
+    </div>
+    <div class="quiz-result" id="latihan1-result" hidden></div>
   </div>
 </section>
 
@@ -610,27 +629,27 @@
   </div>
 </section>
 
-<!-- ============ 11. LATIHAN ============ -->
-<section id="latihan" class="section">
+<!-- ============ LATIHAN 2 ============ -->
+<section id="latihan2" class="section section-quiz">
   <div class="container">
-    <span class="chapter">Bab 11</span>
-    <h2 class="section-title">Latihan Soal SAS</h2>
-    <p>Kerjakan semua soal, lalu klik <b>Periksa Jawaban</b>. Pembahasan akan muncul setelah diperiksa.</p>
-    <div class="quiz-progress"><div id="quizBar"></div></div>
-    <p class="hint" id="quizCount"></p>
-    <form id="quizForm" class="quiz"></form>
+    <span class="chapter">✏️ Latihan 2</span>
+    <h2 class="section-title">Latihan 2: Simbol, Biner, Piksel &amp; Struktur Data</h2>
+    <p>Uji pemahamanmu tentang Bab 6–10: simbol dan kode, bilangan biner, piksel, struktur data, dan membaca data. Kerjakan semua soal, lalu klik <b>Periksa Jawaban</b>. Pembahasan akan muncul setelah diperiksa.</p>
+    <div class="quiz-progress"><div id="latihan2-bar"></div></div>
+    <p class="hint" id="latihan2-count"></p>
+    <form id="latihan2-form" class="quiz"></form>
     <div class="btn-row center">
-      <button class="btn btn-primary" id="quizCheck">✅ Periksa Jawaban</button>
-      <button class="btn btn-ghost" id="quizReset">↺ Ulangi</button>
+      <button class="btn btn-primary" id="latihan2-check">✅ Periksa Jawaban</button>
+      <button class="btn btn-ghost" id="latihan2-reset">↺ Ulangi</button>
     </div>
-    <div class="quiz-result" id="quizResult" hidden></div>
+    <div class="quiz-result" id="latihan2-result" hidden></div>
   </div>
 </section>
 
 <!-- ============ 12. GLOSARIUM ============ -->
 <section id="glosarium" class="section section-alt">
   <div class="container">
-    <span class="chapter">Bab 12</span>
+    <span class="chapter">Bab 11</span>
     <h2 class="section-title">Glosarium</h2>
     <input type="search" id="glossSearch" placeholder="🔍 Cari istilah…" class="search">
     <div class="gloss-grid" id="glossGrid"></div>

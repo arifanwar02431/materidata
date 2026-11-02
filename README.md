@@ -1,6 +1,6 @@
 # 📊 Representasi Data – Koding Kelas 6
 
-Website materi **Koding & Kecerdasan Artifisial kelas 6** bab **Representasi Data**, lengkap dengan alat interaktif dan latihan soal SAS.
+Website materi **Koding & Kecerdasan Artifisial kelas 6** bab **Representasi Data**, lengkap dengan alat interaktif dan dua latihan soal.
 
 ## Isi Materi
 1. Apa itu data & informasi
@@ -8,13 +8,14 @@ Website materi **Koding & Kecerdasan Artifisial kelas 6** bab **Representasi Dat
 3. Mengumpulkan data & turus (penghitung turus interaktif)
 4. Tabel (bisa diedit, otomatis memperbarui diagram)
 5. Diagram: piktogram, batang, garis, lingkaran
+   - ✏️ **Latihan 1**: Data, Tabel & Diagram (20 soal, Bab 1–5)
 6. Simbol & kode (mesin kode huruf ↔ angka)
 7. Bilangan biner (kartu biner, konversi desimal ↔ biner)
 8. Gambar digital & piksel (studio piksel 8×8)
 9. Struktur data: daftar, antrean, tumpukan, tabel, pohon, graf
 10. Membaca data: rata-rata, median, modus, jangkauan (kalkulator data)
-11. Latihan soal SAS (28 soal pilihan ganda + skor + pembahasan)
-12. Glosarium dengan pencarian
+   - ✏️ **Latihan 2**: Simbol, Biner, Piksel & Struktur Data (20 soal, Bab 6–10)
+11. Glosarium dengan pencarian
 
 ## Struktur File
 ```
@@ -38,7 +39,7 @@ Tidak perlu instalasi atau build. Cukup buka `index.html` di browser.
 Setiap kali file di GitHub diubah, Vercel otomatis memperbarui website.
 
 ## Mengubah Soal
-Soal ada di `script.js` pada bagian `const questions = [ ... ]`. Format tiap soal:
+Soal ada di `script.js`: `const questions1 = [ ... ]` untuk Latihan 1 dan `const questions2 = [ ... ]` untuk Latihan 2. Format tiap soal:
 ```js
 { q: 'Pertanyaan …', o: ['Pilihan A', 'Pilihan B', 'Pilihan C', 'Pilihan D'], a: 1, e: 'Pembahasan' },
 ```

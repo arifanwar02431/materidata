@@ -308,3 +308,8 @@ textarea { font-family: ui-monospace, Menlo, Consolas, monospace; letter-spacing
 /* Tautan ke portal Robospark */
 .nav-links a.nav-home { border: 2px solid #fed7aa; margin-left: 4px; }
 .footer-link { color: #fff; font-weight: 800; }
+
+/* Latihan */
+.section-quiz { background: linear-gradient(180deg, #fff7ed 0%, #fffdf7 100%); border-top: 4px dashed #fed7aa; }
+.map-card.quiz-card { border-color: #fdba74; background: #fff7ed; }
+.quiz-card span { background: #0f766e; font-size: 1rem; }
