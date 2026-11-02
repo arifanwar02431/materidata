@@ -1,0 +1,654 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Representasi Data – Koding Kelas 6</title>
+  <meta name="theme-color" content="#ec6416">
+  <meta name="author" content="Arif Anwar">
+  <meta name="description" content="Materi lengkap Koding dan Kecerdasan Artifisial kelas 6: Representasi Data. Data, jenis data, turus, tabel, diagram, simbol, bilangan biner, piksel, struktur data, dan latihan soal SAS.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📊</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ============ NAVIGASI ============ -->
+<header class="topbar">
+  <div class="container nav">
+    <a href="#beranda" class="brand"><span class="brand-icon">📊</span> Representasi Data</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Buka menu">☰</button>
+    <nav class="nav-links" id="navLinks">
+      <a href="#data">Data</a>
+      <a href="#jenis">Jenis Data</a>
+      <a href="#mengumpulkan">Turus</a>
+      <a href="#tabel">Tabel</a>
+      <a href="#diagram">Diagram</a>
+      <a href="#simbol">Simbol</a>
+      <a href="#biner">Biner</a>
+      <a href="#piksel">Piksel</a>
+      <a href="#struktur">Struktur Data</a>
+      <a href="#membaca">Membaca Data</a>
+      <a href="#latihan" class="nav-cta">Latihan SAS</a>
+      <a href="https://robospark-seven.vercel.app/" class="nav-home">← Portal</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<!-- ============ BERANDA ============ -->
+<section id="beranda" class="hero">
+  <div class="container hero-grid">
+    <div>
+      <span class="pill">Portal Arif Anwar · Koding &amp; KA · Kelas 6</span>
+      <h1>Representasi Data</h1>
+      <p class="lead">Belajar cara menyajikan data supaya mudah dipahami, oleh manusia maupun komputer. Mulai dari turus, tabel, dan diagram, sampai bilangan biner dan gambar piksel.</p>
+      <div class="hero-actions">
+        <a href="#data" class="btn btn-primary">Mulai Belajar →</a>
+        <a href="#latihan" class="btn btn-ghost">Langsung Latihan Soal</a>
+      </div>
+    </div>
+    <div class="hero-card">
+      <h3>🎯 Tujuan Pembelajaran</h3>
+      <ul class="check-list">
+        <li>Menjelaskan pengertian data dan informasi</li>
+        <li>Membedakan data kualitatif dan kuantitatif</li>
+        <li>Menyajikan data dengan turus, tabel, dan diagram</li>
+        <li>Memahami simbol, kode, dan bilangan biner</li>
+        <li>Mengubah gambar menjadi kode piksel</li>
+        <li>Mengenal struktur data: daftar, tabel, pohon, graf</li>
+        <li>Membaca dan menafsirkan data (rata-rata, median, modus)</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- Peta materi -->
+<section class="section section-alt">
+  <div class="container">
+    <h2 class="section-title">🗺️ Peta Materi</h2>
+    <div class="map-grid">
+      <a href="#data" class="map-card c1"><span>1</span>Apa itu Data?</a>
+      <a href="#jenis" class="map-card c2"><span>2</span>Jenis Data</a>
+      <a href="#mengumpulkan" class="map-card c3"><span>3</span>Mengumpulkan Data &amp; Turus</a>
+      <a href="#tabel" class="map-card c4"><span>4</span>Tabel</a>
+      <a href="#diagram" class="map-card c5"><span>5</span>Diagram</a>
+      <a href="#simbol" class="map-card c6"><span>6</span>Simbol &amp; Kode</a>
+      <a href="#biner" class="map-card c1"><span>7</span>Bilangan Biner</a>
+      <a href="#piksel" class="map-card c2"><span>8</span>Gambar Piksel</a>
+      <a href="#struktur" class="map-card c3"><span>9</span>Struktur Data</a>
+      <a href="#membaca" class="map-card c4"><span>10</span>Membaca Data</a>
+      <a href="#latihan" class="map-card c5"><span>11</span>Latihan Soal SAS</a>
+      <a href="#glosarium" class="map-card c6"><span>12</span>Glosarium</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 1. DATA ============ -->
+<section id="data" class="section">
+  <div class="container">
+    <span class="chapter">Bab 1</span>
+    <h2 class="section-title">Apa itu Data?</h2>
+    <div class="two-col">
+      <div>
+        <p><strong>Data</strong> adalah kumpulan fakta berupa angka, kata, simbol, gambar, atau suara yang <em>belum diolah</em>. Data bisa kita dapatkan dengan mengamati, bertanya, atau mengukur sesuatu.</p>
+        <p><strong>Informasi</strong> adalah data yang <em>sudah diolah</em> sehingga punya makna dan mudah dipahami.</p>
+        <div class="callout">
+          <strong>💡 Contoh:</strong><br>
+          Data: <code>8, 6, 10, 4, 2</code> (angka saja, belum jelas artinya)<br>
+          Informasi: <em>"Buah yang paling disukai siswa kelas 6 adalah mangga, dipilih 10 siswa."</em>
+        </div>
+        <p><strong>Representasi data</strong> artinya cara <em>menyajikan atau menampilkan</em> data dalam bentuk tertentu, misalnya turus, tabel, diagram, simbol, atau kode, agar data mudah dibaca, dibandingkan, dan dipahami.</p>
+      </div>
+      <div class="flow">
+        <div class="flow-step"><span>📝</span><b>Data</b><small>fakta mentah</small></div>
+        <div class="flow-arrow">↓ diolah</div>
+        <div class="flow-step"><span>⚙️</span><b>Pengolahan</b><small>dihitung, diurutkan, dikelompokkan</small></div>
+        <div class="flow-arrow">↓ disajikan</div>
+        <div class="flow-step"><span>📊</span><b>Representasi</b><small>tabel, diagram, kode</small></div>
+        <div class="flow-arrow">↓ dipahami</div>
+        <div class="flow-step"><span>💡</span><b>Informasi</b><small>bermakna, bisa untuk keputusan</small></div>
+      </div>
+    </div>
+
+    <h3>Bentuk-bentuk Data di Sekitar Kita</h3>
+    <div class="card-grid">
+      <div class="card"><div class="card-emoji">🔢</div><h4>Angka</h4><p>Nilai ulangan, tinggi badan, jumlah siswa.</p></div>
+      <div class="card"><div class="card-emoji">🔤</div><h4>Teks / Kata</h4><p>Nama siswa, alamat, hobi.</p></div>
+      <div class="card"><div class="card-emoji">🖼️</div><h4>Gambar</h4><p>Foto kelas, peta, gambar hewan.</p></div>
+      <div class="card"><div class="card-emoji">🔊</div><h4>Suara</h4><p>Rekaman lagu, pesan suara.</p></div>
+      <div class="card"><div class="card-emoji">🎬</div><h4>Video</h4><p>Video pembelajaran, rekaman kegiatan.</p></div>
+      <div class="card"><div class="card-emoji">🚦</div><h4>Simbol</h4><p>Rambu lalu lintas, emoji, logo.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 2. JENIS DATA ============ -->
+<section id="jenis" class="section section-alt">
+  <div class="container">
+    <span class="chapter">Bab 2</span>
+    <h2 class="section-title">Jenis Data</h2>
+    <div class="two-col">
+      <div class="type-box qual">
+        <h3>🎨 Data Kualitatif</h3>
+        <p>Data yang berupa <strong>kategori, sifat, atau keterangan</strong>, bukan angka hasil mengukur atau menghitung.</p>
+        <ul>
+          <li>Warna kesukaan: merah, biru</li>
+          <li>Jenis kelamin: laki-laki, perempuan</li>
+          <li>Hobi: membaca, sepak bola</li>
+          <li>Rasa makanan: manis, asin</li>
+        </ul>
+      </div>
+      <div class="type-box quan">
+        <h3>📏 Data Kuantitatif</h3>
+        <p>Data yang berupa <strong>angka</strong> hasil menghitung atau mengukur.</p>
+        <ul>
+          <li>Tinggi badan: 145 cm</li>
+          <li>Berat badan: 35 kg</li>
+          <li>Jumlah saudara: 2 orang</li>
+          <li>Suhu udara: 30°C</li>
+        </ul>
+      </div>
+    </div>
+    <div class="callout">
+      <strong>🔎 Kuantitatif dibagi dua:</strong>
+      <ul>
+        <li><b>Data cacah (diskrit)</b>: diperoleh dengan <em>menghitung</em>, hasilnya bilangan bulat. Contoh: jumlah buku = 12.</li>
+        <li><b>Data ukur (kontinu)</b>: diperoleh dengan <em>mengukur</em>, bisa berupa pecahan/desimal. Contoh: panjang meja = 120,5 cm.</li>
+      </ul>
+    </div>
+
+    <h3>🎮 Tebak Jenis Data</h3>
+    <p>Klik tombol yang benar untuk setiap data berikut.</p>
+    <div class="sorter" id="sorter"></div>
+    <p class="sorter-score" id="sorterScore"></p>
+  </div>
+</section>
+
+<!-- ============ 3. MENGUMPULKAN DATA & TURUS ============ -->
+<section id="mengumpulkan" class="section">
+  <div class="container">
+    <span class="chapter">Bab 3</span>
+    <h2 class="section-title">Mengumpulkan Data &amp; Turus</h2>
+    <h3>Cara Mengumpulkan Data</h3>
+    <div class="card-grid">
+      <div class="card"><div class="card-emoji">👀</div><h4>Observasi</h4><p>Mengamati langsung. Contoh: menghitung kendaraan yang lewat depan sekolah.</p></div>
+      <div class="card"><div class="card-emoji">🗣️</div><h4>Wawancara</h4><p>Bertanya langsung kepada narasumber.</p></div>
+      <div class="card"><div class="card-emoji">📋</div><h4>Angket / Survei</h4><p>Memberi daftar pertanyaan untuk diisi banyak orang.</p></div>
+      <div class="card"><div class="card-emoji">📐</div><h4>Pengukuran</h4><p>Mengukur dengan alat, misalnya penggaris, timbangan, termometer.</p></div>
+    </div>
+
+    <h3>Turus (Tally)</h3>
+    <div class="two-col">
+      <div>
+        <p><strong>Turus</strong> adalah tanda garis yang dipakai untuk mencatat data dengan cepat saat menghitung. Setiap 1 data ditulis 1 garis tegak. Garis ke-5 ditulis <strong>miring mencoret</strong> 4 garis sebelumnya, sehingga satu kelompok bernilai <strong>5</strong>.</p>
+        <table class="table">
+          <thead><tr><th>Nilai</th><th>Turus</th></tr></thead>
+          <tbody>
+            <tr><td>1</td><td class="tally-cell" data-tally="1"></td></tr>
+            <tr><td>3</td><td class="tally-cell" data-tally="3"></td></tr>
+            <tr><td>5</td><td class="tally-cell" data-tally="5"></td></tr>
+            <tr><td>7</td><td class="tally-cell" data-tally="7"></td></tr>
+            <tr><td>10</td><td class="tally-cell" data-tally="10"></td></tr>
+            <tr><td>12</td><td class="tally-cell" data-tally="12"></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="tool">
+        <h4>🧮 Penghitung Turus</h4>
+        <p>Klik <b>+1</b> setiap ada data baru, seperti saat mencatat survei.</p>
+        <div class="tally-display" id="tallyDisplay"></div>
+        <div class="tally-num">Jumlah: <b id="tallyNum">0</b></div>
+        <div class="btn-row">
+          <button class="btn btn-primary" id="tallyAdd">+1</button>
+          <button class="btn btn-ghost" id="tallySub">−1</button>
+          <button class="btn btn-ghost" id="tallyReset">Ulang</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 4. TABEL ============ -->
+<section id="tabel" class="section section-alt">
+  <div class="container">
+    <span class="chapter">Bab 4</span>
+    <h2 class="section-title">Menyajikan Data dengan Tabel</h2>
+    <p><strong>Tabel</strong> adalah susunan data dalam <strong>baris</strong> (mendatar) dan <strong>kolom</strong> (tegak). Tabel memudahkan kita membaca dan membandingkan data.</p>
+    <div class="callout">
+      <b>Bagian-bagian tabel:</b> judul tabel, judul kolom (header), baris data, dan sel (kotak pertemuan baris dan kolom).
+    </div>
+
+    <h3>Contoh: Survei Buah Kesukaan Siswa Kelas 6</h3>
+    <p class="hint">✏️ Ubah angka pada kolom <b>Jumlah</b>. Turus, piktogram, diagram batang, dan diagram lingkaran di bawah akan ikut berubah otomatis!</p>
+    <div class="table-wrap">
+      <table class="table table-data">
+        <caption>Tabel Buah Kesukaan Siswa Kelas 6</caption>
+        <thead><tr><th>No</th><th>Buah</th><th>Turus</th><th>Jumlah Siswa</th></tr></thead>
+        <tbody id="fruitTable"></tbody>
+        <tfoot><tr><td colspan="3"><b>Total</b></td><td><b id="fruitTotal">0</b></td></tr></tfoot>
+      </table>
+    </div>
+    <div class="insight" id="fruitInsight"></div>
+    <button class="btn btn-ghost" id="fruitReset">↺ Kembalikan data awal</button>
+  </div>
+</section>
+
+<!-- ============ 5. DIAGRAM ============ -->
+<section id="diagram" class="section">
+  <div class="container">
+    <span class="chapter">Bab 5</span>
+    <h2 class="section-title">Menyajikan Data dengan Diagram</h2>
+    <p><strong>Diagram</strong> adalah gambar yang menyajikan data agar lebih menarik dan mudah dibandingkan sekilas. Ada beberapa jenis diagram, masing-masing cocok untuk keperluan berbeda.</p>
+
+    <div class="tabs" role="tablist">
+      <button class="tab active" data-tab="tab-pikto">🍎 Piktogram</button>
+      <button class="tab" data-tab="tab-batang">📊 Diagram Batang</button>
+      <button class="tab" data-tab="tab-garis">📈 Diagram Garis</button>
+      <button class="tab" data-tab="tab-lingkaran">🥧 Diagram Lingkaran</button>
+    </div>
+
+    <div class="tab-panel active" id="tab-pikto">
+      <div class="two-col">
+        <div>
+          <h3>Piktogram</h3>
+          <p><strong>Piktogram</strong> adalah diagram yang menggunakan <strong>gambar atau simbol</strong> untuk mewakili jumlah data tertentu.</p>
+          <p>Wajib ada <strong>keterangan</strong>, misalnya <em>1 gambar = 2 siswa</em>. Setengah gambar berarti setengah dari nilai itu (1 siswa).</p>
+          <div class="callout">Cocok untuk: data sederhana yang ingin ditampilkan menarik, misalnya untuk anak-anak atau poster.</div>
+        </div>
+        <div class="chart-box">
+          <h4 class="chart-title">Buah Kesukaan Siswa Kelas 6</h4>
+          <div id="pictogram" class="pictogram"></div>
+          <p class="legend-note">Keterangan: 1 gambar = 2 siswa</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="tab-panel" id="tab-batang">
+      <div class="two-col">
+        <div>
+          <h3>Diagram Batang</h3>
+          <p><strong>Diagram batang</strong> menyajikan data dalam bentuk <strong>batang-batang</strong> (persegi panjang). Semakin tinggi batang, semakin besar nilainya.</p>
+          <ul>
+            <li><b>Sumbu mendatar (X)</b>: kategori (nama buah)</li>
+            <li><b>Sumbu tegak (Y)</b>: jumlah/nilai</li>
+          </ul>
+          <div class="callout">Cocok untuk: <b>membandingkan</b> banyak data antar kategori.</div>
+        </div>
+        <div class="chart-box">
+          <h4 class="chart-title">Buah Kesukaan Siswa Kelas 6</h4>
+          <svg id="barChart" viewBox="0 0 520 320" role="img" aria-label="Diagram batang buah kesukaan"></svg>
+        </div>
+      </div>
+    </div>
+
+    <div class="tab-panel" id="tab-garis">
+      <div class="two-col">
+        <div>
+          <h3>Diagram Garis</h3>
+          <p><strong>Diagram garis</strong> menyajikan data dengan <strong>titik-titik yang dihubungkan garis</strong>. Biasanya dipakai untuk data yang berubah dari waktu ke waktu.</p>
+          <div class="callout">Cocok untuk: melihat <b>perubahan / perkembangan</b> dari waktu ke waktu, misalnya pertumbuhan tanaman, suhu harian, atau jumlah pengunjung tiap bulan.</div>
+          <table class="table small">
+            <thead><tr><th>Hari</th><th>Sen</th><th>Sel</th><th>Rab</th><th>Kam</th><th>Jum</th></tr></thead>
+            <tbody><tr><td>Tinggi (cm)</td><td>2</td><td>3</td><td>5</td><td>6</td><td>8</td></tr></tbody>
+          </table>
+          <p>Dari diagram terlihat tanaman <b>terus bertambah tinggi</b>. Kenaikan terbesar terjadi dari Selasa ke Rabu dan Kamis ke Jumat (naik 2 cm).</p>
+        </div>
+        <div class="chart-box">
+          <h4 class="chart-title">Pertumbuhan Tanaman Kacang Hijau</h4>
+          <svg id="lineChart" viewBox="0 0 520 320" role="img" aria-label="Diagram garis pertumbuhan tanaman"></svg>
+        </div>
+      </div>
+    </div>
+
+    <div class="tab-panel" id="tab-lingkaran">
+      <div class="two-col">
+        <div>
+          <h3>Diagram Lingkaran</h3>
+          <p><strong>Diagram lingkaran</strong> menyajikan data dalam bentuk <strong>juring (potongan) lingkaran</strong>. Seluruh lingkaran = 100% = 360°.</p>
+          <div class="formula">
+            Besar sudut = <span class="frac"><span>nilai data</span><span>total data</span></span> × 360°<br>
+            Persen = <span class="frac"><span>nilai data</span><span>total data</span></span> × 100%
+          </div>
+          <p>Contoh: Mangga = 10 dari 30 siswa → 10/30 × 360° = <b>120°</b> (sepertiga lingkaran).</p>
+          <div class="callout">Cocok untuk: menunjukkan <b>bagian dari keseluruhan</b> (persentase).</div>
+        </div>
+        <div class="chart-box">
+          <h4 class="chart-title">Buah Kesukaan Siswa Kelas 6</h4>
+          <div class="pie-wrap">
+            <svg id="pieChart" viewBox="0 0 300 300" role="img" aria-label="Diagram lingkaran buah kesukaan"></svg>
+            <div id="pieLegend" class="pie-legend"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h3>Kapan Memakai Diagram yang Mana?</h3>
+    <div class="table-wrap">
+      <table class="table">
+        <thead><tr><th>Jenis</th><th>Bentuk</th><th>Paling cocok untuk</th></tr></thead>
+        <tbody>
+          <tr><td>Piktogram</td><td>Gambar/simbol</td><td>Data sederhana dan menarik</td></tr>
+          <tr><td>Diagram batang</td><td>Batang persegi panjang</td><td>Membandingkan antar kategori</td></tr>
+          <tr><td>Diagram garis</td><td>Titik dihubungkan garis</td><td>Perubahan dari waktu ke waktu</td></tr>
+          <tr><td>Diagram lingkaran</td><td>Juring lingkaran</td><td>Bagian dari keseluruhan (persen)</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 6. SIMBOL & KODE ============ -->
+<section id="simbol" class="section section-alt">
+  <div class="container">
+    <span class="chapter">Bab 6</span>
+    <h2 class="section-title">Representasi dengan Simbol &amp; Kode</h2>
+    <p>Data juga bisa diwakili dengan <strong>simbol</strong> atau <strong>kode</strong>. Simbol dan kode membuat informasi lebih singkat, cepat dipahami, dan bisa dipahami banyak orang walau berbeda bahasa.</p>
+    <div class="card-grid">
+      <div class="card"><div class="card-emoji">🚦</div><h4>Lampu Lalu Lintas</h4><p>Merah = berhenti, kuning = hati-hati, hijau = jalan.</p></div>
+      <div class="card"><div class="card-emoji">🚻</div><h4>Rambu &amp; Petunjuk</h4><p>Simbol toilet, dilarang merokok, pintu darurat.</p></div>
+      <div class="card"><div class="card-emoji">😀</div><h4>Emoji</h4><p>Mewakili perasaan dengan gambar kecil.</p></div>
+      <div class="card"><div class="card-emoji">🏷️</div><h4>Barcode &amp; QR Code</h4><p>Kode garis/kotak yang dibaca mesin untuk data barang atau tautan.</p></div>
+      <div class="card"><div class="card-emoji">📡</div><h4>Kode Morse</h4><p>Huruf diwakili titik (·) dan garis (–). SOS = ··· ––– ···</p></div>
+      <div class="card"><div class="card-emoji">🔐</div><h4>Kode Rahasia</h4><p>Huruf diganti angka/simbol, misalnya A=1, B=2, C=3.</p></div>
+    </div>
+
+    <div class="tool">
+      <h4>🔐 Mesin Kode Huruf ↔ Angka (A=1, B=2, … Z=26)</h4>
+      <div class="two-col tight">
+        <div>
+          <label for="encInput">Tulis kata/kalimat:</label>
+          <input type="text" id="encInput" value="KODING" maxlength="40">
+          <div class="output" id="encOutput"></div>
+        </div>
+        <div>
+          <label for="decInput">Tulis kode angka (pisah dengan -):</label>
+          <input type="text" id="decInput" value="4-1-20-1">
+          <div class="output" id="decOutput"></div>
+        </div>
+      </div>
+      <details class="alpha-table"><summary>Lihat tabel kode A–Z</summary><div id="alphaTable" class="alpha-grid"></div></details>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 7. BINER ============ -->
+<section id="biner" class="section">
+  <div class="container">
+    <span class="chapter">Bab 7</span>
+    <h2 class="section-title">Bilangan Biner: Bahasa Komputer</h2>
+    <div class="two-col">
+      <div>
+        <p>Komputer hanya mengenal dua keadaan listrik: <strong>ON (menyala)</strong> dan <strong>OFF (mati)</strong>. Karena itu, komputer menyimpan semua data (angka, huruf, gambar, suara) dalam <strong>bilangan biner</strong>, yaitu bilangan yang hanya memakai angka <strong>0</strong> dan <strong>1</strong>.</p>
+        <ul>
+          <li><b>1</b> = ON / menyala / ada</li>
+          <li><b>0</b> = OFF / mati / tidak ada</li>
+          <li>Satu angka biner disebut <b>bit</b> (<em>binary digit</em>).</li>
+          <li>8 bit = <b>1 byte</b>.</li>
+        </ul>
+        <p>Bilangan sehari-hari kita disebut <strong>desimal</strong> (basis 10, angka 0–9). Biner disebut basis 2.</p>
+      </div>
+      <div class="callout big">
+        <b>Nilai tempat biner</b> (dari kanan ke kiri) selalu <b>dikali 2</b>:
+        <div class="place-values">
+          <div><b>128</b></div><div><b>64</b></div><div><b>32</b></div><div><b>16</b></div><div><b>8</b></div><div><b>4</b></div><div><b>2</b></div><div><b>1</b></div>
+        </div>
+        Contoh: <code>1011</code> = 8 + 0 + 2 + 1 = <b>11</b>
+      </div>
+    </div>
+
+    <h3>🃏 Kartu Biner</h3>
+    <p>Klik kartu untuk membalik. Kartu terbuka = <b>1</b>, kartu tertutup = <b>0</b>. Jumlahkan titik pada kartu yang terbuka!</p>
+    <div class="bin-cards" id="binCards"></div>
+    <div class="bin-result">
+      Biner: <code id="binString">00000</code> = Desimal: <b id="binValue">0</b>
+    </div>
+    <div class="challenge">
+      <span id="binChallengeText">🎯 Tantangan: buat angka <b id="binTarget">13</b> dengan kartu!</span>
+      <button class="btn btn-ghost" id="binNew">Tantangan baru</button>
+      <span id="binFeedback" class="feedback"></span>
+    </div>
+
+    <h3>Cara Mengubah Bilangan</h3>
+    <div class="two-col">
+      <div class="tool">
+        <h4>Desimal → Biner (dibagi 2)</h4>
+        <p>Bagi terus dengan 2, catat sisanya. Baca sisa <b>dari bawah ke atas</b>.</p>
+        <label for="decToBin">Bilangan desimal (0–255):</label>
+        <input type="number" id="decToBin" value="13" min="0" max="255">
+        <div class="steps" id="decToBinSteps"></div>
+      </div>
+      <div class="tool">
+        <h4>Biner → Desimal (nilai tempat)</h4>
+        <p>Kalikan setiap angka dengan nilai tempatnya, lalu jumlahkan.</p>
+        <label for="binToDec">Bilangan biner (maks. 8 digit):</label>
+        <input type="text" id="binToDec" value="1101" maxlength="8">
+        <div class="steps" id="binToDecSteps"></div>
+      </div>
+    </div>
+
+    <h3>Tabel Biner 0–15</h3>
+    <div class="bin-table" id="binTable"></div>
+    <div class="callout">
+      <b>💡 Huruf juga jadi biner!</b> Komputer memakai kode <b>ASCII</b>. Contohnya huruf <b>A</b> = 65 = <code>01000001</code>, huruf <b>B</b> = 66 = <code>01000010</code>.
+    </div>
+  </div>
+</section>
+
+<!-- ============ 8. PIKSEL ============ -->
+<section id="piksel" class="section section-alt">
+  <div class="container">
+    <span class="chapter">Bab 8</span>
+    <h2 class="section-title">Gambar Digital &amp; Piksel</h2>
+    <div class="two-col">
+      <div>
+        <p>Gambar di layar HP atau komputer tersusun dari kotak-kotak sangat kecil yang disebut <strong>piksel</strong> (<em>picture element</em>). Kalau gambar diperbesar terus, kotak-kotak itu akan terlihat.</p>
+        <p>Pada gambar <strong>hitam-putih</strong>, setiap piksel cukup diwakili 1 bit:</p>
+        <ul>
+          <li><b>1</b> = piksel hitam ⬛</li>
+          <li><b>0</b> = piksel putih ⬜</li>
+        </ul>
+        <p>Jadi gambar bisa diubah menjadi <strong>kode biner</strong> baris demi baris. Proses ini disebut <strong>digitalisasi gambar</strong>.</p>
+        <div class="callout">
+          <b>Gambar berwarna</b> butuh lebih banyak bit per piksel. Layar mencampur tiga warna cahaya: <span class="r">Merah (Red)</span>, <span class="g">Hijau (Green)</span>, <span class="b">Biru (Blue)</span>, disingkat <b>RGB</b>. Makin banyak piksel (resolusi tinggi), makin tajam gambarnya, tetapi ukuran filenya makin besar.
+        </div>
+      </div>
+      <div class="pixel-example">
+        <h4>Contoh: huruf "T"</h4>
+        <div class="example-wrap">
+          <div class="mini-grid" id="exampleGrid"></div>
+          <pre class="code-col">11111
+00100
+00100
+00100
+00100</pre>
+        </div>
+      </div>
+    </div>
+
+    <h3>🎨 Studio Piksel 8×8</h3>
+    <p>Klik kotak untuk mewarnai. Lihat kodenya berubah! Atau tulis kode lalu klik <b>Gambar dari kode</b>.</p>
+    <div class="pixel-studio">
+      <div>
+        <div class="pixel-grid" id="pixelGrid" aria-label="Kanvas piksel 8 kali 8"></div>
+        <div class="btn-row">
+          <button class="btn btn-ghost" data-preset="hati">❤️ Hati</button>
+          <button class="btn btn-ghost" data-preset="senyum">🙂 Senyum</button>
+          <button class="btn btn-ghost" data-preset="rumah">🏠 Rumah</button>
+          <button class="btn btn-ghost" id="pixelInvert">🔄 Balik warna</button>
+          <button class="btn btn-ghost" id="pixelClear">🧽 Hapus</button>
+        </div>
+      </div>
+      <div>
+        <label for="pixelCode">Kode biner (8 baris × 8 angka):</label>
+        <textarea id="pixelCode" rows="8" spellcheck="false"></textarea>
+        <button class="btn btn-primary" id="pixelDraw">Gambar dari kode</button>
+        <p class="hint" id="pixelInfo"></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 9. STRUKTUR DATA ============ -->
+<section id="struktur" class="section">
+  <div class="container">
+    <span class="chapter">Bab 9</span>
+    <h2 class="section-title">Struktur Data Sederhana</h2>
+    <p><strong>Struktur data</strong> adalah cara menyusun dan menyimpan data agar mudah dicari dan digunakan. Berikut empat struktur data sederhana.</p>
+
+    <div class="struct-grid">
+      <div class="struct-card">
+        <h3>📝 Daftar (List)</h3>
+        <p>Data disusun <b>berurutan</b> satu per satu. Setiap data punya urutan (indeks).</p>
+        <ol class="list-demo">
+          <li>Beras</li><li>Telur</li><li>Minyak</li><li>Gula</li>
+        </ol>
+        <p class="hint">Contoh: daftar belanja, daftar hadir, playlist lagu.</p>
+        <div class="queue-box">
+          <b>Antrean (Queue):</b> yang <b>pertama datang, pertama dilayani</b>.<br>
+          <b>Tumpukan (Stack):</b> yang <b>terakhir ditaruh, pertama diambil</b>, seperti tumpukan piring.
+        </div>
+      </div>
+
+      <div class="struct-card">
+        <h3>🗂️ Tabel</h3>
+        <p>Data disusun dalam <b>baris dan kolom</b>. Setiap baris = satu data lengkap, setiap kolom = satu jenis keterangan.</p>
+        <table class="table small">
+          <thead><tr><th>Nama</th><th>Kelas</th><th>Hobi</th></tr></thead>
+          <tbody>
+            <tr><td>Rina</td><td>6A</td><td>Menari</td></tr>
+            <tr><td>Bayu</td><td>6B</td><td>Futsal</td></tr>
+            <tr><td>Sari</td><td>6A</td><td>Membaca</td></tr>
+          </tbody>
+        </table>
+        <p class="hint">Contoh: data siswa, jadwal pelajaran, spreadsheet.</p>
+      </div>
+
+      <div class="struct-card">
+        <h3>🌳 Pohon (Tree)</h3>
+        <p>Data disusun <b>bercabang</b> dari satu titik paling atas (akar) ke bawah.</p>
+        <svg viewBox="0 0 320 190" class="struct-svg" role="img" aria-label="Contoh struktur pohon folder">
+          <g class="edges">
+            <line x1="160" y1="38" x2="70" y2="92"/><line x1="160" y1="38" x2="250" y2="92"/>
+            <line x1="70" y1="112" x2="35" y2="152"/><line x1="70" y1="112" x2="110" y2="152"/>
+            <line x1="250" y1="112" x2="250" y2="152"/>
+          </g>
+          <g class="nodes">
+            <rect x="115" y="12" width="90" height="28" rx="8" class="n-root"/><text x="160" y="31">📁 Sekolah</text>
+            <rect x="25" y="88" width="90" height="28" rx="8"/><text x="70" y="107">📁 Kelas 6</text>
+            <rect x="205" y="88" width="90" height="28" rx="8"/><text x="250" y="107">📁 Guru</text>
+            <rect x="2" y="148" width="66" height="28" rx="8" class="n-leaf"/><text x="35" y="167">6A</text>
+            <rect x="78" y="148" width="66" height="28" rx="8" class="n-leaf"/><text x="111" y="167">6B</text>
+            <rect x="212" y="148" width="76" height="28" rx="8" class="n-leaf"/><text x="250" y="167">Jadwal</text>
+          </g>
+        </svg>
+        <p class="hint">Contoh: silsilah keluarga, susunan folder di komputer, struktur organisasi.</p>
+      </div>
+
+      <div class="struct-card">
+        <h3>🕸️ Graf (Graph)</h3>
+        <p>Terdiri dari <b>titik (simpul)</b> yang dihubungkan <b>garis (sisi)</b>. Garis bisa diberi angka, misalnya jarak.</p>
+        <svg viewBox="0 0 320 190" class="struct-svg" role="img" aria-label="Contoh graf peta jarak">
+          <g class="edges">
+            <line x1="50" y1="50" x2="160" y2="30"/><line x1="50" y1="50" x2="80" y2="150"/>
+            <line x1="160" y1="30" x2="270" y2="70"/><line x1="80" y1="150" x2="230" y2="155"/>
+            <line x1="160" y1="30" x2="230" y2="155"/><line x1="270" y1="70" x2="230" y2="155"/>
+          </g>
+          <g class="weights">
+            <text x="100" y="32">2 km</text><text x="40" y="105">3 km</text>
+            <text x="222" y="40">4 km</text><text x="150" y="168">5 km</text>
+            <text x="200" y="92">6 km</text><text x="262" y="118">1 km</text>
+          </g>
+          <g class="gnodes">
+            <circle cx="50" cy="50" r="20"/><text x="50" y="55">🏠</text>
+            <circle cx="160" cy="30" r="20"/><text x="160" y="35">🏪</text>
+            <circle cx="270" cy="70" r="20"/><text x="270" y="75">🕌</text>
+            <circle cx="80" cy="150" r="20"/><text x="80" y="155">🌳</text>
+            <circle cx="230" cy="155" r="20"/><text x="230" y="160">🏫</text>
+          </g>
+        </svg>
+        <p class="hint">Rute terpendek dari 🏠 ke 🏫: 🏠→🏪→🕌→🏫 = 2+4+1 = <b>7 km</b>. Contoh: peta jalan, jaringan pertemanan, rute bus.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 10. MEMBACA DATA ============ -->
+<section id="membaca" class="section section-alt">
+  <div class="container">
+    <span class="chapter">Bab 10</span>
+    <h2 class="section-title">Membaca &amp; Menafsirkan Data</h2>
+    <p>Setelah data disajikan, kita perlu <strong>membaca</strong> dan <strong>menyimpulkan</strong>. Beberapa ukuran yang sering dipakai:</p>
+    <div class="card-grid">
+      <div class="card"><div class="card-emoji">➗</div><h4>Rata-rata (Mean)</h4><p>Jumlah semua data dibagi banyak data.<br><code>(7+8+9) ÷ 3 = 8</code></p></div>
+      <div class="card"><div class="card-emoji">🎯</div><h4>Median</h4><p>Nilai tengah setelah data <b>diurutkan</b>.<br><code>5,6,<b>7</b>,8,9 → 7</code></p></div>
+      <div class="card"><div class="card-emoji">🔁</div><h4>Modus</h4><p>Nilai yang <b>paling sering</b> muncul.<br><code>6,7,7,8,7 → 7</code></p></div>
+      <div class="card"><div class="card-emoji">↕️</div><h4>Tertinggi, Terendah, Jangkauan</h4><p>Jangkauan = tertinggi − terendah.<br><code>9 − 5 = 4</code></p></div>
+    </div>
+    <div class="callout">
+      <b>Median untuk data genap:</b> ambil dua nilai di tengah, lalu dirata-rata. Contoh: 4, 6, <b>7, 9</b>, 10, 12 → (7 + 9) ÷ 2 = <b>8</b>.
+    </div>
+
+    <div class="tool">
+      <h4>🧮 Kalkulator Data</h4>
+      <label for="statInput">Masukkan data (pisahkan dengan koma):</label>
+      <input type="text" id="statInput" value="7, 8, 6, 9, 7, 8, 7, 10">
+      <div class="stat-grid" id="statOutput"></div>
+    </div>
+
+    <h3>Langkah Menafsirkan Diagram</h3>
+    <ol class="steps-list">
+      <li><b>Baca judul</b>: diagram ini tentang apa?</li>
+      <li><b>Baca sumbu dan keterangan</b>: satuan apa yang dipakai? Berapa nilai 1 gambar?</li>
+      <li><b>Cari nilai tertinggi dan terendah.</b></li>
+      <li><b>Bandingkan</b>: hitung selisih atau jumlah yang diminta.</li>
+      <li><b>Buat kesimpulan</b> dengan kalimat sendiri.</li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============ 11. LATIHAN ============ -->
+<section id="latihan" class="section">
+  <div class="container">
+    <span class="chapter">Bab 11</span>
+    <h2 class="section-title">Latihan Soal SAS</h2>
+    <p>Kerjakan semua soal, lalu klik <b>Periksa Jawaban</b>. Pembahasan akan muncul setelah diperiksa.</p>
+    <div class="quiz-progress"><div id="quizBar"></div></div>
+    <p class="hint" id="quizCount"></p>
+    <form id="quizForm" class="quiz"></form>
+    <div class="btn-row center">
+      <button class="btn btn-primary" id="quizCheck">✅ Periksa Jawaban</button>
+      <button class="btn btn-ghost" id="quizReset">↺ Ulangi</button>
+    </div>
+    <div class="quiz-result" id="quizResult" hidden></div>
+  </div>
+</section>
+
+<!-- ============ 12. GLOSARIUM ============ -->
+<section id="glosarium" class="section section-alt">
+  <div class="container">
+    <span class="chapter">Bab 12</span>
+    <h2 class="section-title">Glosarium</h2>
+    <input type="search" id="glossSearch" placeholder="🔍 Cari istilah…" class="search">
+    <div class="gloss-grid" id="glossGrid"></div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <p>📊 <b>Representasi Data</b> · Materi Koding &amp; Kecerdasan Artifisial Kelas 6</p>
+    <p><a href="https://robospark-seven.vercel.app/" class="footer-link">Kembali ke Portal Belajar Koding &amp; Robotika</a></p>
+    <p class="muted">© 2026 Arif Anwar</p>
+  </div>
+</footer>
+
+<button class="to-top" id="toTop" aria-label="Kembali ke atas">↑</button>
+
+<script src="script.js"></script>
+</body>
+</html>
